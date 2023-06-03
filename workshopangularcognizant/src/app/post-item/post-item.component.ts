@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { PostService } from '../post.service';
 
 @Component({
@@ -8,12 +8,15 @@ import { PostService } from '../post.service';
 })
 export class PostItemComponent {
   @Input() post: any;
+  @Output() postDeleted = new EventEmitter();
 
   constructor(private postService: PostService) { }
 
   deletePost(id: number): void {
-    this.postService.deletePost(id).subscribe(() => {
-      // Emitir um evento para notificar o componente pai sobre a exclusão do post
-    });
+    //alert('deletar');
+    let objToPai = { "id": id };
+
+    this.postDeleted.emit(objToPai);
+    console.log('Resposta para o component pai');
   }
 }

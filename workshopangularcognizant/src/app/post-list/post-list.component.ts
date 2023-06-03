@@ -16,14 +16,15 @@ export class PostListComponent implements OnInit {
   }
 
   getPosts(): void {
+
     this.postService.getPosts().subscribe(posts => {
       this.posts = posts;
     });
   }
-
-  deletePost(id: number): void {
-    this.postService.deletePost(id).subscribe(() => {
-      this.posts = this.posts.filter(post => post.id !== id);
-    });
+  handlePostDeleted(valueObj: any): void {
+    console.log('Foi emitido o evento e chegou no pai >>>> ', valueObj["id"]);
+    this.posts = this.posts.filter(post => post.id !== valueObj["id"]);
+    alert('Post apagado! Já era.');
   }
+
 }
