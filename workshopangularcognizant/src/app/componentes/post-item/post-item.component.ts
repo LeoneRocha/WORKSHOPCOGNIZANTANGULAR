@@ -1,6 +1,6 @@
-import { Component, EventEmitter, Inject, Input, Output } from '@angular/core';
-import { PostService } from '../post.service';
-import { Router } from '@angular/router';
+import { Component, EventEmitter, Inject, Input, Output } from '@angular/core'; 
+import { Router } from '@angular/router'; 
+import { PostService } from 'src/app/services/post.service';
 
 @Component({
   selector: 'app-post-item',

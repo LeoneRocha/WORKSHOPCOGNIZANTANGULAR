@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { PostService } from '../post.service';
+import { ActivatedRoute, Router } from '@angular/router';  
+import { PostService } from 'src/app/services/post.service';
 
 @Component({
   selector: 'post-edit',
