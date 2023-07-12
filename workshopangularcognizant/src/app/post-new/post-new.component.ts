@@ -31,7 +31,7 @@ export class PostNewComponent implements OnInit {
   } 
   savePost(): void {
     console.log(this.post);
-    this.postUpdate.emit(this.post);
+    //this.postUpdate.emit(this.post);
     this.postService.addPost(this.post)
       .subscribe(() => {
         this.router.navigate(['/post-list']);
