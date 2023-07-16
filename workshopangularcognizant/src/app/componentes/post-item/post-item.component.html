@@ -1,6 +1,6 @@
 <div class="card">
   <div class="card-body">
-    <h5 class="card-title">{{ post.title }}</h5>
+    <h5 class="card-title">#{{ post.id }} - {{ post.title }}</h5>
     <p class="card-text">{{ post.body }}</p>
     <button class="btn btn-primary" (click)="editPost(post.id)">Editar</button>
     <button class="btn btn-danger" (click)="deletePost(post.id)">Excluir</button>

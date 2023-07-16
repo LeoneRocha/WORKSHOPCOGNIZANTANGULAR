@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';  
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { PostService } from 'src/app/services/post.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { PostService } from 'src/app/services/post.service';
 export class PostListComponent implements OnInit {
   posts: any[] = [];
 
-  constructor(private postService: PostService) { }
+  constructor(private postService: PostService, private router: Router) { }
 
   ngOnInit(): void {
     this.getPosts();
@@ -24,7 +25,15 @@ export class PostListComponent implements OnInit {
   handlePostDeleted(valueObj: any): void {
     console.log('Foi emitido o evento e chegou no pai >>>> ', valueObj["id"]);
     this.posts = this.posts.filter(post => post.id !== valueObj["id"]);
+
+    this.postService.deletePost(valueObj["id"])
+      .subscribe(() => {
+        this.router.navigate(['/post-list']);
+      });
+
     alert('Post apagado! Já era.');
+
+
   }
   /*
     handlePostUpdated(updatedPost: any): void {
