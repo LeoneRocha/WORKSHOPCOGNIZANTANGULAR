@@ -34,16 +34,5 @@ export class PostListComponent implements OnInit {
     alert('Post apagado! Já era.');
 
 
-  }
-  /*
-    handlePostUpdated(updatedPost: any): void {
-      console.log('Foi emitido o evento e chegou no pai >>>> ', updatedPost["id"]);    
-      const index = this.posts.findIndex(post => post.id === updatedPost.id);
-      if (index !== -1) {
-        this.posts[index] = updatedPost;
-      } 
-      alert('Post atualizado! Já era.');
-    }
-  */
-
+  } 
 }
