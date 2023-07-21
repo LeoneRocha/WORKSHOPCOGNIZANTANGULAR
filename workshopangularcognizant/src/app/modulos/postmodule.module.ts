@@ -20,4 +20,4 @@ import { FormsModule } from '@angular/forms';
   ],
   providers: []
 })
-export class PostmoduleModule { }
+export class PostModule { }

@@ -17,7 +17,7 @@ namespace PostAPI.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Post> Get()
+        public IEnumerable<Post> GetAll()
         {
             return _postRepository.GetAll();
         }

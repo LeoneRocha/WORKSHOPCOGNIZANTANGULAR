@@ -7,7 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { PostEditComponent } from './componentes/post-edit/post-edit.component';
 import { FormsModule } from '@angular/forms'; 
 import { MeucomponenteonewayComponent } from './componentes/meucomponenteoneway/meucomponenteoneway.component';
-import { PostmoduleModule } from './modulos/postmodule.module';
+import { PostModule } from './modulos/postmodule.module';
 import { MeucomponentetwoawayComponent } from './componentes/meucomponentetwoaway/meucomponentetwoaway.component';
 import { MeucomponentedecoratorComponent } from './componentes/meucomponentedecorator/meucomponentedecorator.component';
 
@@ -20,7 +20,7 @@ import { MeucomponentedecoratorComponent } from './componentes/meucomponentedeco
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    AppRoutingModule, PostmoduleModule
+    AppRoutingModule, PostModule
   ],
   providers: [],
   bootstrap: [AppComponent]
